@@ -32,9 +32,9 @@ module matmul_tb();
         matrixA[3][0] = 13; matrixA[3][1] = 14; matrixA[3][2] = 15; matrixA[3][3] = 16;
 
         // Assign matrixB
-        matrixB[0][0] = 1;  matrixB[0][1] = 0;  matrixB[0][2] = 0;  matrixB[0][3] = 0;
-        matrixB[1][0] = 0;  matrixB[1][1] = 1;  matrixB[1][2] = 0;  matrixB[1][3] = 0;
-        matrixB[2][0] = 0;  matrixB[2][1] = 0;  matrixB[2][2] = 1;  matrixB[2][3] = 0;
+        matrixB[0][0] = 2;  matrixB[0][1] = 7;  matrixB[0][2] = 9;  matrixB[0][3] = 0;
+        matrixB[1][0] = 0;  matrixB[1][1] = 2;  matrixB[1][2] = 0;  matrixB[1][3] = 82;
+        matrixB[2][0] = 4;  matrixB[2][1] = 0;  matrixB[2][2] = 2;  matrixB[2][3] = 0;
         matrixB[3][0] = 0;  matrixB[3][1] = 0;  matrixB[3][2] = 0;  matrixB[3][3] = 1;
 
         index = 0;
@@ -43,14 +43,15 @@ module matmul_tb();
             for (l = 0; l < 4; l = l + 1)
                 matrixResult[k][l] = 0;
 
-        // pulse input_start at beginning for one clock cycle
+        // pulse input_start at beginning for two clock cycles
         input_start = 0;   // start low
         #5;                // optional small delay before first pulse
         input_start = 1;   // set high for one clock cycle
         @(posedge clk);    // wait for next rising edge
+        @(posedge clk);
         input_start = 0;   // turn off permanently
 
-        #1000
+        #700
         $finish;
     end
     
@@ -173,8 +174,8 @@ module matmul_tb();
     	#20 clk = !clk;
     
     // displaying matrix output
-    always @(output_rdy) begin
-        #10;
+    always @(posedge output_rdy) begin
+        #5;
         $display("matrixA:");
         for (i = 0; i < 4; i = i + 1) begin
             $write("[ ");
@@ -192,14 +193,18 @@ module matmul_tb();
             end
             $write("]\n");
         end
-
-        $display("matrixResult:");
-        for (i = 0; i < 4; i = i + 1) begin
-            $write("[ ");
-            for (j = 0; j < 4; j = j + 1) begin
-                $write("%0d ", matrixResult[i][j]);
+    end
+    always @(posedge clk) begin
+        if (output_rdy) begin
+            #5
+            $display("matrixResult:");
+            for (i = 0; i < 4; i = i + 1) begin
+                $write("[ ");
+                for (j = 0; j < 4; j = j + 1) begin
+                    $write("%0d ", matrixResult[i][j]);
+                end
+                $write("]\n");
             end
-            $write("]\n");
         end
     end
     

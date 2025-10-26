@@ -1,0 +1,88 @@
+[*]
+[*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
+[*] Sun Oct 26 00:19:59 2025
+[*]
+[dumpfile] "/Users/joycehu/Desktop/matmulFU/matmul.vcd"
+[dumpfile_mtime] "Sun Oct 26 00:06:16 2025"
+[dumpfile_size] 11239
+[savefile] "/Users/joycehu/Desktop/matmulFU/dump.gtkw"
+[timestart] 240600
+[size] 1440 600
+[pos] -1 -1
+*-16.454248 305200 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+[markername] AA
+[markername] BB
+[markername] CC
+[markername] DD
+[markername] EE
+[markername] FF
+[markername] GG
+[markername] HH
+[markername] II
+[markername] JJ
+[markername] KK
+[markername] LL
+[markername] MM
+[markername] NN
+[markername] OO
+[markername] PP
+[markername] QQ
+[markername] RR
+[markername] SS
+[markername] TT
+[markername] UU
+[markername] VV
+[markername] WW
+[markername] XX
+[markername] YY
+[markername] ZZ
+[treeopen] matmul_tb.
+[sst_width] 253
+[signals_width] 484
+[sst_expanded] 1
+[sst_vpaned_height] 159
+@22
+matmul_tb.matmultest.outD_flat[127:0]
+matmul_tb.matmultest.counter[3:0]
+@28
+[color] 2
+matmul_tb.output_rdy
+@22
+[color] 2
+matmul_tb.matmultest.counter[3:0]
+matmul_tb.matmultest.outD_flat[127:0]
+@28
+matmul_tb.clk
+matmul_tb.input_start
+@22
+matmul_tb.flat_A[127:0]
+matmul_tb.flat_B[127:0]
+@c00200
+-elemA
+@22
+matmul_tb.matmultest.elemA_row1[127:0]
+matmul_tb.matmultest.elemA_row2[127:0]
+matmul_tb.matmultest.elemA_row3[127:0]
+matmul_tb.matmultest.elemA_row4[127:0]
+@1401200
+-elemA
+@c00200
+-elemB
+@22
+matmul_tb.matmultest.elemB_row1[127:0]
+matmul_tb.matmultest.elemB_row2[127:0]
+matmul_tb.matmultest.elemB_row3[127:0]
+matmul_tb.matmultest.elemB_row4[127:0]
+@1401200
+-elemB
+@800200
+-accVals
+@22
+matmul_tb.matmultest.acc_row1[127:0]
+matmul_tb.matmultest.acc_row2[127:0]
+matmul_tb.matmultest.acc_row3[127:0]
+matmul_tb.matmultest.acc_row4[127:0]
+@1000200
+-accVals
+[pattern_trace] 1
+[pattern_trace] 0
