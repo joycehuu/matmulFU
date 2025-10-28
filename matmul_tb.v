@@ -32,8 +32,8 @@ module matmul_tb();
         matrixA[3][0] = 13; matrixA[3][1] = 14; matrixA[3][2] = 15; matrixA[3][3] = 16;
 
         // Assign matrixB
-        matrixB[0][0] = 2;  matrixB[0][1] = 7;  matrixB[0][2] = 9;  matrixB[0][3] = 0;
-        matrixB[1][0] = 0;  matrixB[1][1] = 2;  matrixB[1][2] = 0;  matrixB[1][3] = 82;
+        matrixB[0][0] = 2;  matrixB[0][1] = 7;  matrixB[0][2] = 0;  matrixB[0][3] = 0;
+        matrixB[1][0] = 0;  matrixB[1][1] = 2;  matrixB[1][2] = 0;  matrixB[1][3] = 8;
         matrixB[2][0] = 4;  matrixB[2][1] = 0;  matrixB[2][2] = 2;  matrixB[2][3] = 0;
         matrixB[3][0] = 0;  matrixB[3][1] = 0;  matrixB[3][2] = 0;  matrixB[3][3] = 1;
 
