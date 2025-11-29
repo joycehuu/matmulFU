@@ -22,6 +22,32 @@ module matmul_tb();
     assign rowResult[2] = rowResult_flat[63:32];
     assign rowResult[3] = rowResult_flat[31:0];
 
+    // For GTKWAVE visualizing better
+    // wire [31:0] A1;
+    // wire [31:0] A2;
+    // wire [31:0] A3;
+    // wire [31:0] A4;
+    // wire [31:0] B1;
+    // wire [31:0] B2;
+    // wire [31:0] B3;
+    // wire [31:0] B4;
+    // wire [31:0] rowResult1;
+    // wire [31:0] rowResult2;
+    // wire [31:0] rowResult3;
+    // wire [31:0] rowResult4;
+    // assign A1 = flat_A[127:96];
+    // assign A2 = flat_A[95:64];
+    // assign A3 = flat_A[63:32];
+    // assign A4 = flat_A[31:0];
+    // assign B1 = flat_B[127:96];
+    // assign B2 = flat_B[95:64];
+    // assign B3 = flat_B[63:32];
+    // assign B4 = flat_B[31:0];
+    // assign rowResult1 = rowResult_flat[127:96];
+    // assign rowResult2 = rowResult_flat[95:64];
+    // assign rowResult3 = rowResult_flat[63:32];
+    // assign rowResult4 = rowResult_flat[31:0];
+
     // initializing stuff to 0
     integer i, j, k, l;
     initial begin
@@ -32,9 +58,9 @@ module matmul_tb();
         matrixA[3][0] = 13; matrixA[3][1] = 14; matrixA[3][2] = 15; matrixA[3][3] = 16;
 
         // Assign matrixB
-        matrixB[0][0] = 2;  matrixB[0][1] = 7;  matrixB[0][2] = 0;  matrixB[0][3] = 0;
-        matrixB[1][0] = 0;  matrixB[1][1] = 2;  matrixB[1][2] = 0;  matrixB[1][3] = 8;
-        matrixB[2][0] = 4;  matrixB[2][1] = 0;  matrixB[2][2] = 2;  matrixB[2][3] = 0;
+        matrixB[0][0] = 1;  matrixB[0][1] = 0;  matrixB[0][2] = 0;  matrixB[0][3] = 0;
+        matrixB[1][0] = 0;  matrixB[1][1] = 1;  matrixB[1][2] = 0;  matrixB[1][3] = 0;
+        matrixB[2][0] = 0;  matrixB[2][1] = 0;  matrixB[2][2] = 1;  matrixB[2][3] = 0;
         matrixB[3][0] = 0;  matrixB[3][1] = 0;  matrixB[3][2] = 0;  matrixB[3][3] = 1;
 
         index = 0;

@@ -1,0 +1,75 @@
+[*]
+[*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
+[*] Sat Nov 29 21:26:21 2025
+[*]
+[dumpfile] "/Users/joycehu/Desktop/matmulFU/matmul.vcd"
+[dumpfile_mtime] "Sat Nov 29 21:17:40 2025"
+[dumpfile_size] 10174
+[savefile] "/Users/joycehu/Desktop/matmulFU/4x4_wave.gtkw"
+[timestart] 98700
+[size] 1360 598
+[pos] -1 -1
+*-17.441406 535600 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+[markername] AA
+[markername] BB
+[markername] CC
+[markername] DD
+[markername] EE
+[markername] FF
+[markername] GG
+[markername] HH
+[markername] II
+[markername] JJ
+[markername] KK
+[markername] LL
+[markername] MM
+[markername] NN
+[markername] OO
+[markername] PP
+[markername] QQ
+[markername] RR
+[markername] SS
+[markername] TT
+[markername] UU
+[markername] VV
+[markername] WW
+[markername] XX
+[markername] YY
+[markername] ZZ
+[sst_width] 424
+[signals_width] 198
+[sst_expanded] 1
+[sst_vpaned_height] 158
+@28
++{Clock} matmul_tb.clk
+@24
++{Cycle Counter} matmul_tb.counter[3:0]
+@800200
+-Input A
+@24
+matmul_tb.A1[31:0]
+matmul_tb.A2[31:0]
+matmul_tb.A3[31:0]
+matmul_tb.A4[31:0]
+@1000200
+-Input A
+@800200
+-Input B
+@24
+matmul_tb.B1[31:0]
+matmul_tb.B2[31:0]
+matmul_tb.B3[31:0]
+matmul_tb.B4[31:0]
+@1000200
+-Input B
+@800200
+-Matrix Row Result
+@420
++{Column1} matmul_tb.rowResult1[31:0]
++{Column2} matmul_tb.rowResult2[31:0]
++{Column3} matmul_tb.rowResult3[31:0]
++{Column4} matmul_tb.rowResult4[31:0]
+@1000200
+-Matrix Row Result
+[pattern_trace] 1
+[pattern_trace] 0

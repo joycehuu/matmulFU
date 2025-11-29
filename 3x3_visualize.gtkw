@@ -1,0 +1,46 @@
+[*]
+[*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
+[*] Sat Nov 29 21:14:34 2025
+[*]
+[dumpfile] "/Users/joycehu/Desktop/matmulFU/max_3x3.vcd"
+[dumpfile_mtime] "Sat Nov 29 20:57:19 2025"
+[dumpfile_size] 6262
+[savefile] "/Users/joycehu/Desktop/matmulFU/3x3_visualize.gtkw"
+[timestart] 99800
+[size] 1288 600
+[pos] -1 -1
+*-16.661829 416500 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+[sst_width] 253
+[signals_width] 282
+[sst_expanded] 1
+[sst_vpaned_height] 159
+@28
++{Clock} max_3x3_tb.clk
+@22
++{Cycle Counter} max_3x3_tb.counter[3:0]
+@800200
+-Input A
+@24
++{A1} max_3x3_tb.A1[31:0]
++{A2} max_3x3_tb.A2[31:0]
++{A3} max_3x3_tb.A3[31:0]
+@1000200
+-Input A
+@800200
+-Input B
+@24
++{B1} max_3x3_tb.B1[31:0]
++{B2} max_3x3_tb.B2[31:0]
++{B3} max_3x3_tb.B3[31:0]
+@1000200
+-Input B
+@800200
+-Matrix Row Result
+@24
++{Column1} max_3x3_tb.rowResult1[31:0]
++{Column2} max_3x3_tb.rowResult2[31:0]
++{Column3} max_3x3_tb.rowResult3[31:0]
+@1000200
+-Matrix Row Result
+[pattern_trace] 1
+[pattern_trace] 0

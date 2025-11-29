@@ -21,6 +21,26 @@ module max_3x3_tb();
     assign rowResult[1] = rowResult_flat[63:32];
     assign rowResult[2] = rowResult_flat[31:0];
 
+    // For GTKWAVE visualizing better
+    // wire [31:0] A1;
+    // wire [31:0] A2;
+    // wire [31:0] A3;
+    // wire [31:0] B1;
+    // wire [31:0] B2;
+    // wire [31:0] B3;
+    // wire [31:0] rowResult1;
+    // wire [31:0] rowResult2;
+    // wire [31:0] rowResult3;
+    // assign A1 = flat_A[95:64];
+    // assign A2 = flat_A[63:32];
+    // assign A3 = flat_A[31:0];
+    // assign B1 = flat_B[95:64];
+    // assign B2 = flat_B[63:32];
+    // assign B3 = flat_B[31:0];
+    // assign rowResult1 = rowResult_flat[95:64];
+    // assign rowResult2 = rowResult_flat[63:32];
+    // assign rowResult3 = rowResult_flat[31:0];
+
     // initializing stuff to 0
     integer i, j, k, l;
     initial begin
