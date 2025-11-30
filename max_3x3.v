@@ -61,26 +61,24 @@ module max_3x3(clk, rst, input_start, inA_flat, inB_flat, outD_flat, output_rdy,
             for (j = 0; j < 3; j= j+1) begin: innerloop
 
                 always @(posedge clk) begin
-                    if (i == 0) begin
-                        elemA[i][j] <= inA[j];
-                    end else begin
-                        elemA[i][j] <= elemA[i-1][j];
-                    end
-                    if (j == 0) begin
-                        elemB[i][j] <= inB[i];
-                    end else begin
-                        elemB[i][j] <= elemB[i][j-1];
-                    end
-                end
-
-                always @(posedge clk) begin
                     if (rst | input_start) begin
                         acc[i][j] <= 32'd0;
                         elemA[i][j] <= 32'd0;
                         elemB[i][j] <= 32'd0;
                     end else begin
-                        acc[i][j] <= acc[i][j] + (elemA[i][j] * elemB[i][j]);
+                        if (i == 0) begin
+                            elemA[i][j] <= inA[j];
+                        end else begin
+                            elemA[i][j] <= elemA[i-1][j];
+                        end
+                        if (j == 0) begin
+                            elemB[i][j] <= inB[i];
+                        end else begin
+                            elemB[i][j] <= elemB[i][j-1];
+                        end
                     end
+                    
+                    acc[i][j] <= acc[i][j] + (elemA[i][j] * elemB[i][j]);
                 end
             end
         end
